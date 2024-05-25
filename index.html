@@ -10,13 +10,76 @@
     <div class="wrapper">
         <header class="header">
             <div class="container">
-                <div class="header__inner"></div>
+                <div class="header__inner">
+                    <a class="header__logo" href="#">
+                        <img src="images/header/logo.svg" alt="logo">
+                    </a>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link menu__link--active"  href="#">Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link"  href="#">About</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link"  href="#">Packages</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link"  href="#">FAQ</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link"  href="#">Community</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__btn">
+                        <a class="header__link button header__link--while" href="#">Login</a>
+                        <a class="header__link button" href="#">Sign Up</a>
+                    </div>
+                    
+                </div>
             </div>
         </header>
         <main class="main">
             <section class="top">
                 <div class="container">
-                    <div class="top__inner"></div>
+                    <div class="top__inner">
+                        <div class="top__content">
+                            <h1 class="top__title">Discover your favorite place with us</h1>
+                            <p class="top__text">Your journey begins here with our curated travel experiences. Discover new horizons, create lasting memories, and explore the world with our expertly crafted itineraries.</p>
+                            <form class="top__form">
+                                <label class="top__form-label top__form-label--location">
+                                    <p class="top__form-text">Locations</p>
+                                    <input type="text" class="top__form-input" placeholder="e.g Bali, Indonesia">
+                                </label>
+                                <div class="top__form-decor"></div>
+                                <label class="top__form-label top__form-label--date">
+                                    <p class="top__form-text top__form-text--date">Date and time</p>
+                                    <input type="date" class="top__form-input" placeholder="MM/DD/YYYY">
+                                </label>
+                                <button class="top__form-btn"></button>
+                            </form>
+                        </div>
+                        <div class="top__images">
+                            <div class="top__card">
+                                <img src="images/top/card-bg.png" alt="bg">
+                                <div class="top__card-body">
+                                    <div class="top__card-info">
+                                        <h3 class="top__card-name">Coco De Heaven</h3>
+                                        <p class="top__card-price">Starts from <span class="top__card-price-dollars">$</span> <span class="top__card-price-num">400</span></p>
+                                    </div>
+                                    <div class="top__card-star">
+                                        (4.5)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="top__decor">
+                                <img src="images/top/decor.svg" alt="decor">
+                            </div>
+                            <img class="top__image" src="images/top/bg.png" alt="bg">
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

@@ -3,7 +3,8 @@ body{
     line-height: 1.5;
     background-color: $bg-color;
     color:$main-color;
-    @extend %roboto-400;
+    letter-spacing: 0%;
+    @extend %CircularStd-400;
     &.open--menu{
         overflow: hidden;
     }

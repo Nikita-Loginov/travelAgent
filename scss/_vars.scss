@@ -1,23 +1,37 @@
 $bg-color:#fff;
-$main-color:#000;
-$accent-color:#232323;
-$text-color:#000;
-$title-color:#000;
-$input-colorbg:#000;
-$textarea-colorbg:#563563;
-%roboto-400{
+$main-color: rgb(144, 144, 144);
+$accent-color:rgb(53, 175, 244);
+$text-color:rgb(144, 144, 144);
+$title-color:#181818;
+$input-colorbg:#181818;
+// $textarea-colorbg:#563563;
+
+%CircularStd-400{
     font-family: "Roboto",sans-serif;
     font-weight: 400;
 }
 
+%CircularStd-500{
+    font-family: "Roboto",sans-serif;
+    font-weight: 500;
+}
+
+%CircularStd-700{
+    font-family: "Roboto",sans-serif;
+    font-weight: 700;
+}
+
 %title{
+    @extend %CircularStd-500;
     font-size: 40px;
-    color:$text-color;
+    color:$title-color;
 }
 
 %text{
-    font-size: 20px;
+    font-size: 18px;
     color:$text-color;
+    @extend %CircularStd-400;
+    line-height: 1.5;
 }
 
 // %text-h1{
@@ -38,40 +52,51 @@ $textarea-colorbg:#563563;
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    min-height: 40px;
+    min-height: 48px;
     transition: all .5s;
+    font-size: 16px;
+    background-color: $accent-color;
+    border-radius: 8px;
+    color:#fff;
+    &:hover{
+        background-color: $input-colorbg;
+    }
 }
 
 %input{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 30px;
-    min-height: 59px;
+    padding: 0 16px;
+    min-height: 48px;
     background-color: $input-colorbg;
-    @extend %text;
-    border:1px solid $text-color;
-    border-radius: 14px;
+    font-size: 14px;
+    color: $bg-color;
+    line-height: 1.5;
+    border-radius: 8px;
     width: 100%;
     &::placeholder{
-        @extend %text;
+        font-size: 18px;
+        color: $bg-color;
+        @extend %CircularStd-400;
+        line-height: 1.5;
     }
 }
 
-%textarea{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 18px 30px;
-    min-height: 190px;
-    background-color: $textarea-colorbg;
-    width: 100%;
-    border:1px solid $text-color;
-    border-radius: 14px;
-    @extend %text;
-    resize: none;
-    &::placeholder{
-        @extend %text;
-    }
-}
+// %textarea{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     padding: 18px 30px;
+//     min-height: 190px;
+//     background-color: $textarea-colorbg;
+//     width: 100%;
+//     border:1px solid $text-color;
+//     border-radius: 14px;
+//     @extend %text;
+//     resize: none;
+//     &::placeholder{
+//         @extend %text;
+//     }
+// }
 

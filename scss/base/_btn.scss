@@ -1,0 +1,28 @@
+.button{
+    @extend %btn;
+}
+
+.header{
+    &__btn{
+        display: flex;
+        gap:0 12px;
+    }   
+    &__link{
+        min-height: 40px;
+        @extend %text;
+        @extend %CircularStd-400;
+        background-color: $input-colorbg;
+        &:hover{
+            background-color: $accent-color;
+        }
+        &--while{
+            background-color: #fff;
+            border: 1px solid rgb(183, 183, 183);
+            color:rgb(183, 183, 183);
+            &:hover{
+                border-color: $accent-color;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,42 @@
+.menu{
+    &__list{
+        display: flex;
+        gap:0 24px;
+    }
+    &__item{
+        
+    }
+    &__link{
+        color: $title-color;
+        @extend %CircularStd-400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        transition: all .5s;
+        @extend %CircularStd-400;
+        &--active{
+            color:$accent-color;
+        }
+        position: relative;
+        &:before{
+            position: absolute;
+            content:"";
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color:$accent-color;
+            height: 1px;
+            transform-origin: right;
+            // transform: scale(0);
+            transition: transform .3s;
+        }
+        &:hover{
+            transform-origin: left;
+            transform: scale(1);
+        }
+        &:hover{
+            color:$accent-color;
+        }
+        
+    }
+}
