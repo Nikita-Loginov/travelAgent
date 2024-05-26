@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.7/autoComplete.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -53,7 +54,7 @@
                             <form class="top__form">
                                 <label class="top__form-label top__form-label--location">
                                     <p class="top__form-text">Locations</p>
-                                    <input type="text" class="top__form-input" placeholder="e.g Bali, Indonesia">
+                                    <input type="text" class="top__form-input"  autocomplete="off" id="autoComplete">
                                 </label>
                                 <div class="top__form-decor"></div>
                                 <label class="top__form-label top__form-label--date">
@@ -269,7 +270,7 @@
                     </div>
                 </div>
             </section>
-            <section class="embark">
+            <section class="embark"  class="headline">
                 <div class="container">
                     <div class="embark__inner">
                         <div class="embark__content">
@@ -814,13 +815,75 @@
                     </div>
                 </div>
             </section>
+            <section class="newsletter">
+                <div class="newsletter__container">
+                    <div class="container">
+                        <div class="newsletter__inner">
+                            <div class="newsletter__content">
+                                <div class="newsletter__text">
+                                    <h4>Join our newsletter to stay up to date </h4>
+                                    <p>Stay connected with our brand</p>
+                                </div>
+                                <form class="newsletter__form">
+                                    <input class="newsletter__input" type="email" placeholder="Enter your email">
+                                    <button class="newsletter__btn button" type="submit">
+                                        Subscribe
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="footer">
-            <div class="container">
-                <div class="footer__inner"></div>
+            <div class="footer__container">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__body">
+                            <a class="footer__logo" href="#">
+                                <img src="images/footer/logo.svg" alt="logo">
+                            </a>
+                            <p class="footer__text">Wanderlust meets wander well – Experience seamless travel with our services.</p>
+                        </div>
+                        <div class="footer__menu">
+                            <ul class="footer__list">
+                                <h4 class="footer__list-text">Company</h4>
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">About Us</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">Blog</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">Customers</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">Packages</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">Community</a>
+                                </li>
+                            </ul>
+                            <ul class="footer__list">
+                                <h4 class="footer__list-text">Help</h4>
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">Support</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">FAQs</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__list-link" href="#">Refund Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
     </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.7/css/autoComplete.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main/main.js"></script>
 </body>

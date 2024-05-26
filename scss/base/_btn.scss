@@ -11,9 +11,8 @@
         min-height: 40px;
         @extend %text;
         @extend %CircularStd-500;
-        background-color: $input-colorbg;
         &:hover{
-            background-color: $accent-color;
+            background-color: #181818;
         }
         &--while{
             background-color: #fff;
@@ -21,6 +20,7 @@
             color:rgb(183, 183, 183);
             &:hover{
                 border-color: $accent-color;
+                border-color: #181818;
             }
         }
     }
@@ -28,5 +28,15 @@
 
 .different__link{
     display: inline-flex;
+    &:hover{
+        background-color: #181818;
+    }
+}
+
+.newsletter__btn{
+    background-color: #181818;
+    &:hover{
+        color:#181818
+    }
 }
 

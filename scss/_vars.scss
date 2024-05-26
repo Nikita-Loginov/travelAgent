@@ -3,7 +3,7 @@ $main-color: rgb(144, 144, 144);
 $accent-color:rgb(53, 175, 244);
 $text-color:rgb(144, 144, 144);
 $title-color:#181818;
-$input-colorbg:#181818;
+$input-colorbg:#fff;
 // $textarea-colorbg:#563563;
 
 %CircularStd-500{
@@ -66,13 +66,13 @@ $input-colorbg:#181818;
     min-height: 48px;
     background-color: $input-colorbg;
     font-size: 14px;
-    color: $bg-color;
     line-height: 1.5;
     border-radius: 8px;
     width: 100%;
+    color:#909090;
     &::placeholder{
-        font-size: 18px;
-        color: $bg-color;
+        font-size: 14px;
+        color:#909090;
         @extend %CircularStd-500;
         line-height: 1.5;
     }

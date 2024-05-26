@@ -1,0 +1,64 @@
+.newsletter{
+    overflow: hidden;
+    &__container{
+        width: 100%;
+        background-color: $accent-color;
+    }
+    &__inner{
+        position: relative;
+        &:before{
+            position: absolute;
+            content:"";
+            width:  320px;
+            height: 320px;
+            left: -78px;
+            top: -48px;
+            background-repeat: no-repeat;
+            background-image: url(../../images/icon/geo.svg);
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        gap:15px;
+        padding: 80px 0;
+        align-items: center;
+        padding-left: 180px;
+        
+    }
+    &__text{
+        flex-basis: 536px;
+        h4{
+            color: #fff;
+            font-size: 28px;
+            margin-bottom: 4px;
+        }
+        p{
+            font-size: 20px;
+            color:#F0F0F0;
+        }
+    }
+    &__form{
+        display: flex;
+        gap:12px;
+        position: relative;
+        flex:1;
+        &:before{
+            position: absolute;
+            content:"";
+            width: 24px;
+            height: 24px;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../../images/icon/email.svg);
+            background-repeat: no-repeat;
+            background-position: center
+        }
+    }
+    &__input{
+        @extend %input;
+        padding-left: 44px;
+        
+    }
+}

@@ -1,0 +1,18 @@
+.autoComplete_wrapper>input{
+    height: auto !important;
+    width: 100%!important;
+    padding: 0 10px!important;
+    font-size: 14px !important;
+    text-overflow: ellipsis;
+    color: #909090 !important; 
+    border-radius: 0 !important;
+    border: none !important;
+    background-image: url(images/search.svg) !important;
+    &::placeholder{
+        color:#909090 !important;
+    }
+}
+
+.autoComplete_wrapper>ul>li mark{
+    color:$accent-color !important;
+}
