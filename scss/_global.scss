@@ -4,7 +4,7 @@ body{
     background-color: $bg-color;
     color:$main-color;
     letter-spacing: 0%;
-    @extend %CircularStd-400;
+    @extend %CircularStd-500;
     &.open--menu{
         overflow: hidden;
     }

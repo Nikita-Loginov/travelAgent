@@ -1,0 +1,22 @@
+.partners{
+    padding: 60px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:0 22px;
+    }
+    &__text{
+        @extend %text;
+        color: rgb(158, 158, 158);
+        font-size: 24px;
+    }
+    &__body{
+        display: flex;
+        gap:10px 32px;
+        align-items: center;
+    }
+    &__link--bugHeight{
+        align-self: flex-start;
+    }
+}

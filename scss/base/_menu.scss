@@ -8,12 +8,11 @@
     }
     &__link{
         color: $title-color;
-        @extend %CircularStd-400;
         font-size: 16px;
         line-height: 150%;
         letter-spacing: 0%;
         transition: all .5s;
-        @extend %CircularStd-400;
+        @extend %CircularStd-500;
         &--active{
             color:$accent-color;
         }

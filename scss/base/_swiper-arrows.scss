@@ -1,0 +1,20 @@
+.swiper-arrows{
+    display: flex;
+    gap:15px;
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+    &__prev{
+        background-color: transparent;
+        border: 1px solid rgb(185, 185, 185);
+        rotate:-180deg;
+    }
+    &__next{
+        background-color: $accent-color;
+    }
+}

@@ -10,7 +10,7 @@
     &__link{
         min-height: 40px;
         @extend %text;
-        @extend %CircularStd-400;
+        @extend %CircularStd-500;
         background-color: $input-colorbg;
         &:hover{
             background-color: $accent-color;

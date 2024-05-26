@@ -1,0 +1,41 @@
+.popular-swiper{
+    &__image{
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 16px;
+    }
+    &__text{
+        display: flex;
+        justify-content: space-between;
+        gap:15px;
+    }
+    &__coutry{
+        @extend %title;
+        font-size: 20px;
+    }
+    &__star{
+        position: relative;
+        padding-left: 25px;
+        @extend %text;
+        font-size: 14px;
+        color:#181818;
+        &:before{
+            position: absolute;
+            content:"";
+            width: 17px;
+            height: 16px;
+            left: 0;
+            background-image: url(../../images/top/star.svg);
+        }
+    }
+    &__price{
+        span{
+            color:#181818;
+            i{
+                padding-right: 4px;
+                color:$accent-color;
+                @extend %CircularStd-700;
+            }
+        }
+    }
+}

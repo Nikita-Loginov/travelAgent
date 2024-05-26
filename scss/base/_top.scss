@@ -139,6 +139,7 @@
         font-size: 18px;
     }
     &__card-price{
+        @extend %CircularStd-500;
         &-dollars{
             color:$accent-color;
             @extend %CircularStd-500;

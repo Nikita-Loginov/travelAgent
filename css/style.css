@@ -59,23 +59,18 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-.menu__link, body, .top__text, .header__link {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-}
-
 .top__form-input::-moz-placeholder {
-  font-family: "Roboto", sans-serif;
+  font-family: "CircularStd-Medium";
   font-weight: 500;
 }
 
-.top__card-price-num, .top__card-price-dollars, .top__card-star, .top__card-name, .top__form-input::placeholder, .top__form-input, .top__form-text, .top__title {
-  font-family: "Roboto", sans-serif;
+.top__card-price-num, .top__card-price-dollars, .top__card-price, .menu__link, body, .popular-swiper__star, .partners__text, .top__text, .header__link, .popular-swiper__coutry, .popular__body-text h3, .top__card-star, .top__card-name, .top__form-input::placeholder, .top__form-input, .top__form-text, .top__title {
+  font-family: "CircularStd-Medium";
   font-weight: 500;
 }
 
-.top__title {
-  font-family: "Roboto", sans-serif;
+.popular-swiper__price span i, .top__title {
+  font-family: "CircularStd-Bold", sans-serif;
   font-weight: 700;
 }
 
@@ -84,12 +79,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #181818;
 }
 
-.top__card-star, .top__card-name, .top__form-input::placeholder, .top__form-input, .top__form-text, .top__title {
+.popular-swiper__coutry, .popular__body-text h3, .top__card-star, .top__card-name, .top__form-input::placeholder, .top__form-input, .top__form-text, .top__title {
   font-size: 40px;
   color: #181818;
 }
 
-.top__text, .header__link {
+.popular-swiper__star, .partners__text, .top__text, .header__link {
   font-size: 18px;
   color: rgb(144, 144, 144);
   line-height: 1.5;
@@ -137,7 +132,16 @@ body.open--menu {
   padding: 0 15px;
 }
 
-@font-face {}
+@font-face {
+  font-family: "CircularStd-Bold";
+  src: url("../fonts/CircularStd-Bold.woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "CircularStd-Medium";
+  src: url("../fonts/CircularStd-Medium.woff2");
+  font-weight: 500;
+}
 .header__btn {
   display: flex;
   gap: 0 12px;
@@ -378,4 +382,100 @@ body.open--menu {
   100% {
     rotate: 360deg;
   }
+}
+.partners {
+  padding: 60px 0;
+}
+.partners__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 22px;
+}
+.partners__text {
+  color: rgb(158, 158, 158);
+  font-size: 24px;
+}
+.partners__body {
+  display: flex;
+  gap: 10px 32px;
+  align-items: center;
+}
+.partners__link--bugHeight {
+  align-self: flex-start;
+}
+
+.popular {
+  padding: 60px 0;
+}
+.popular__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow: hidden;
+}
+.popular__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.popular__body-text {
+  display: grid;
+  gap: 16px;
+}
+.popular-swiper__image {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.popular-swiper__text {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.popular-swiper__coutry {
+  font-size: 20px;
+}
+.popular-swiper__star {
+  position: relative;
+  padding-left: 25px;
+  font-size: 14px;
+  color: #181818;
+}
+.popular-swiper__star:before {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 16px;
+  left: 0;
+  background-image: url(../../images/top/star.svg);
+}
+.popular-swiper__price span {
+  color: #181818;
+}
+.popular-swiper__price span i {
+  padding-right: 4px;
+  color: rgb(53, 175, 244);
+}
+
+.swiper-arrows {
+  display: flex;
+  gap: 15px;
+}
+.swiper-arrows button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.swiper-arrows__prev {
+  background-color: transparent;
+  border: 1px solid rgb(185, 185, 185);
+  rotate: -180deg;
+}
+.swiper-arrows__next {
+  background-color: rgb(53, 175, 244);
 }/*# sourceMappingURL=style.css.map */
