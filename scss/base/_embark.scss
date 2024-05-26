@@ -47,6 +47,17 @@
     }
     &__image{
         position: relative;
+        &:before{
+            content:"";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-image: url(../../images/embark/bg.svg);
+            top: -62px;
+            left: -105px;
+            z-index: -1;
+            transform: translate(45%,45%);
+        }
     }
     &__imgbox{
         display: grid;
