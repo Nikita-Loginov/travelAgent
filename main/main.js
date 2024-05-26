@@ -72,4 +72,10 @@ const autoCompleteJS = new autoComplete({
     }
 });
 
-ScrollReveal().reveal('.headline');
+const BodyHidden = document.querySelector('body')
+const menuBtn = document.querySelector('.menu__burger')
+const menu = document.querySelector('.menu')
+menuBtn.addEventListener('click',function(item){
+    menu.classList.toggle('menuBurgerActiv')
+    BodyHidden.classList.toggle('open--menu')
+})

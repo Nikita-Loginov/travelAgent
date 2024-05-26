@@ -168,6 +168,12 @@ body.open--menu {
   src: url("../fonts/CircularStd-Medium.woff2");
   font-weight: 500;
 }
+@media (max-width: 550px) {
+  .button {
+    padding: 0 15px;
+  }
+}
+
 .header__btn {
   display: flex;
   gap: 0 12px;
@@ -186,6 +192,11 @@ body.open--menu {
 .header__link--while:hover {
   border-color: rgb(53, 175, 244);
   border-color: #181818;
+}
+@media (max-width: 1023px) {
+  .header__btn {
+    margin-left: auto;
+  }
 }
 
 .different__link {
@@ -210,6 +221,26 @@ body.open--menu {
   justify-content: space-between;
   align-items: center;
   gap: 0 32px;
+}
+.header__logo {
+  position: relative;
+  z-index: 10;
+}
+@media (max-width: 1023px) {
+  .header__inner {
+    justify-content: unset;
+  }
+}
+@media (max-width: 550px) {
+  .header__inner {
+    gap: 5px;
+  }
+  .header__logo {
+    flex-basis: 100px;
+  }
+  .header__logo img {
+    width: 100%;
+  }
 }
 
 .menu__list {
@@ -248,6 +279,71 @@ body.open--menu {
 }
 .menu__link:hover {
   color: rgb(53, 175, 244);
+}
+.menu__burger {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: none;
+  z-index: 100;
+}
+.menu__burger:before, .menu__burger:after,
+.menu__burger span {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgb(53, 175, 244);
+  left: 0;
+}
+.menu__burger:before {
+  top: 0;
+}
+.menu__burger:after {
+  bottom: 0;
+}
+.menu__burger span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 1023px) {
+  .menu {
+    order: 2;
+  }
+  .menu__burger {
+    display: block;
+  }
+  .menu__list {
+    position: absolute;
+    inset: 0;
+    height: 100vh;
+    background-color: #181818;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    padding-top: 20px;
+    gap: 20px;
+    transform: translateX(100%);
+    transition: all 0.3s;
+  }
+  .menu__link {
+    color: #fff;
+    font-size: 28px;
+  }
+  .menu__item {
+    transform: translateX(70px);
+    transition: all 3s;
+  }
+  .menu.menuBurgerActiv .menu__list {
+    transform: translateX(0);
+  }
+  .menu.menuBurgerActiv .menu__item {
+    transform: translateX(0);
+  }
 }
 
 .top {
