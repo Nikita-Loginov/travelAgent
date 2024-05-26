@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-.top__card-price-num, .top__card-price-dollars, .top__card-price, .menu__link, body, .popular-swiper__star, .partners__text, .top__text, .header__link, .popular-swiper__coutry, .popular__body-text h3, .top__card-star, .top__card-name, .top__form-input::placeholder, .top__form-input, .top__form-text, .top__title {
+.different__card-price-num, .different__card-price-dollars, .different__card-price, .top__card-price-num, .top__card-price-dollars, .top__card-price, .menu__link, body, .different__text, .embark__text, .popular-swiper__star, .partners__text, .top__text, .header__link, .different__author-name, .different__card-star, .different__card-name, .different__title, .embark__decor-title, .embark__item-title, .embark__title, .popular-swiper__coutry, .popular__body-text h3, .top__card-star, .top__card-name, .top__form-input::placeholder, .top__form-input, .top__form-text, .top__title {
   font-family: "CircularStd-Medium";
   font-weight: 500;
 }
@@ -79,12 +79,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #181818;
 }
 
-.popular-swiper__coutry, .popular__body-text h3, .top__card-star, .top__card-name, .top__form-input::placeholder, .top__form-input, .top__form-text, .top__title {
+.different__author-name, .different__card-star, .different__card-name, .different__title, .embark__decor-title, .embark__item-title, .embark__title, .popular-swiper__coutry, .popular__body-text h3, .top__card-star, .top__card-name, .top__form-input::placeholder, .top__form-input, .top__form-text, .top__title {
   font-size: 40px;
   color: #181818;
 }
 
-.popular-swiper__star, .partners__text, .top__text, .header__link {
+.different__text, .embark__text, .popular-swiper__star, .partners__text, .top__text, .header__link {
   font-size: 18px;
   color: rgb(144, 144, 144);
   line-height: 1.5;
@@ -160,6 +160,10 @@ body.open--menu {
 }
 .header__link--while:hover {
   border-color: rgb(53, 175, 244);
+}
+
+.different__link {
+  display: inline-flex;
 }
 
 .header {
@@ -478,4 +482,185 @@ body.open--menu {
 }
 .swiper-arrows__next {
   background-color: rgb(53, 175, 244);
+}
+
+.embark {
+  padding: 60px 0;
+}
+.embark__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.embark__content {
+  flex-basis: 520px;
+}
+.embark__title {
+  margin-bottom: 24px;
+  text-transform: capitalize;
+}
+.embark__text {
+  margin-bottom: 32px;
+}
+.embark__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 24px;
+  list-style: none;
+  counter-reset: custom-counter;
+}
+.embark__item {
+  counter-increment: custom-counter;
+}
+.embark__item-title {
+  margin-bottom: 4px;
+  font-size: 18px;
+  position: relative;
+}
+.embark__item-title:before {
+  content: counter(custom-counter);
+  width: 24px;
+  height: 24px;
+  background-color: rgb(53, 175, 244);
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-flex;
+  justify-content: center;
+}
+.embark__image {
+  position: relative;
+}
+.embark__imgbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.embark__img {
+  border-radius: 18px;
+}
+.embark__img--big {
+  grid-column: span 2;
+}
+.embark__decor {
+  background-color: #fff;
+  padding: 12px;
+  display: grid;
+  gap: 16px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px 0px rgba(50, 75, 104, 0.17);
+  position: absolute;
+  left: -56px;
+  top: 96px;
+}
+.embark__decor-img img {
+  border-radius: 50%;
+}
+.embark__decor-img img:nth-child(2) {
+  position: relative;
+  left: -13px;
+}
+.embark__decor-img img:nth-child(3) {
+  position: relative;
+  left: -26px;
+}
+.embark__decor-title {
+  font-size: 18px;
+}
+.embark__decor-title span {
+  color: rgb(53, 175, 244);
+}
+
+.different {
+  padding: 112px 0;
+}
+.different__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+}
+.different__img {
+  position: relative;
+}
+.different__content {
+  flex-basis: 560px;
+}
+.different__title {
+  margin-bottom: 24px;
+}
+.different__text {
+  margin-bottom: 40px;
+}
+.different__card {
+  position: absolute;
+  top: 43px;
+  right: -40px;
+  display: flex;
+  gap: 0 16px;
+  align-items: start;
+  min-width: 324px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0px 4px 34px 0px rgba(50, 75, 104, 0.17);
+}
+.different__card-body {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  flex-basis: 100%;
+  align-items: self-start;
+}
+.different__card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.different__card-name {
+  font-size: 18px;
+}
+.different__card-price-dollars {
+  color: rgb(53, 175, 244);
+}
+.different__card-price-num {
+  color: #181818;
+}
+.different__card-star {
+  font-size: 14px;
+  padding-left: 21px;
+  position: relative;
+}
+.different__card-star:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url(../../images/top/star.svg);
+}
+.different__author {
+  border-radius: 82px;
+  box-shadow: 0px 4px 34px 0px rgba(50, 75, 104, 0.17);
+  padding: 12px;
+  position: absolute;
+  bottom: 132px;
+  left: -32px;
+  background-color: #fff;
+  display: flex;
+  gap: 16px;
+}
+.different__author img {
+  border-radius: 50%;
+}
+.different__author-text {
+  display: grid;
+  gap: 2px;
+}
+.different__author-name {
+  font-size: 18px;
+}
+.different__author-place {
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */

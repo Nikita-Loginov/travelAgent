@@ -1,0 +1,104 @@
+.different{
+    padding: 112px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        gap:50px;
+        align-items: center;
+    }
+    &__img{
+        position: relative;
+    }
+    &__content{
+        flex-basis: 560px;
+    }
+    &__title{
+        @extend %title;
+        margin-bottom: 24px;
+    }
+    &__text{
+        @extend %text;
+        margin-bottom: 40px;
+    }
+    &__card{
+        position: absolute;
+        top:43px;
+        right: -40px;
+        display: flex;
+        gap:0 16px;
+        align-items: start;
+        min-width: 324px;
+        background-color: $bg-color;
+        border-radius: 12px;
+        padding: 12px;
+        box-shadow: 0px 4px 34px 0px rgba(50, 75, 104, 0.17);
+    }
+    &__card-body{
+        display: flex;
+        justify-content: space-between;
+        gap:5px;
+        flex-basis: 100%;
+        align-items: self-start;
+    }
+    &__card-info{
+        display: flex;
+        flex-direction: column;
+        gap:4px;
+    }
+    &__card-name{
+        @extend %title;
+        font-size: 18px;
+    }
+    &__card-price{
+        @extend %CircularStd-500;
+        &-dollars{
+            color:$accent-color;
+            @extend %CircularStd-500;
+        }
+        &-num{
+            color:$title-color;
+            @extend %CircularStd-500;
+        }  
+    }
+    &__card-star{
+        @extend %title;
+        font-size: 14px;
+        @extend %CircularStd-500;
+        padding-left: 21px;
+        position: relative;
+        &:before{
+            position: absolute;
+            content:"";
+            left: 0;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background-image: url(../../images/top/star.svg);
+        }
+    }
+    &__author{
+        border-radius: 82px;
+        box-shadow: 0px 4px 34px 0px rgba(50, 75, 104, 0.17);
+        padding: 12px;
+        position: absolute;
+        bottom: 132px;
+        left: -32px;
+        background-color: #fff;
+        display: flex;
+        gap:16px;
+        img{
+            border-radius:50%;
+        } 
+    }
+    &__author-text{
+        display: grid;
+        gap:2px;
+    }
+    &__author-name{
+        @extend %title;
+        font-size: 18px;
+    }
+    &__author-place{
+        font-size: 14px;
+    }
+}
