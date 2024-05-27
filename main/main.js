@@ -1,11 +1,25 @@
 const swiper = new Swiper('.popular-swiper', {
     loop: true,
-    slidesPerView: 4,
+    slidesPerView: 1.1,
     spaceBetween: 32,
     navigation: {
         nextEl: '.swiper-arrows__next',
         prevEl: '.swiper-arrows__prev',
     },
+    breakpoints:{
+        1280:{
+            slidesPerView: 4,
+        },
+        1023:{
+            slidesPerView: 3.5,
+        },
+        767:{
+            slidesPerView: 3,
+        },
+        550:{
+            slidesPerView: 2,
+        }
+    }
 });
 
 const autoCompleteJS = new autoComplete({

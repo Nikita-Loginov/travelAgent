@@ -1,5 +1,5 @@
 .partners{
-    padding: 60px 0;
+    padding: clamp(1.25rem, 0.341rem + 4.55vw, 3.75rem) 0;
     &__inner{
         display: flex;
         justify-content: space-between;
@@ -9,14 +9,22 @@
     &__text{
         @extend %text;
         color: rgb(158, 158, 158);
-        font-size: 24px;
+        font-size: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem);
     }
     &__body{
         display: flex;
         gap:10px 32px;
         align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     &__link--bugHeight{
         align-self: flex-start;
+    }
+    @media(max-width:1023px){
+        &__inner{
+            flex-direction: column;
+            gap:20px
+        }
     }
 }

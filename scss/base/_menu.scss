@@ -51,6 +51,7 @@
         position: relative;
         display: none;
         z-index: 100;
+        overflow: hidden;
         &:before,
         &:after,
         span{
@@ -60,6 +61,7 @@
             height: 2px;
             background-color: $accent-color;
             left: 0;
+            transition: all .3s;
         }
         &:before{
             top: 0;
@@ -70,6 +72,7 @@
         span{
             top:50%;
             transform: translateY(-50%);
+            transition: all .3s;
         }
     }
     @media(max-width:1023px){
@@ -106,6 +109,24 @@
             .menu__item{
                 transform: translateX(0);
             }
+            .menu__burger{
+                &:before,
+                &:after{
+                    transform: translateY(-50%);
+                }
+                &:before{
+                    top:47%;
+                    rotate:45deg;
+                }
+                &:after{
+                    bottom: 50%;
+                    rotate:-45deg;
+                }
+                span{
+                    transform: translateX(-100%);
+                }
+            }
+
         }
     }
 }

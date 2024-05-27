@@ -18,7 +18,7 @@ $input-colorbg:#fff;
 
 %title{
     @extend %CircularStd-500;
-    font-size: 40px;
+    font-size: clamp(1.375rem, 0.966rem + 2.05vw, 2.5rem);
     color:$title-color;
 }
 
