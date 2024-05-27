@@ -1,6 +1,6 @@
 .footer{
     &__container{
-        padding: 80px 0;
+        padding: clamp(1.25rem, -0.395rem + 7.02vw, 5rem) 0;
         background: #181818;
     }
     &__body{
@@ -60,5 +60,27 @@
     &__list-link{
         font-size: 16px;
         color:#fff;
+    }
+    @media(max-width:1023px){
+        &__menu{
+            justify-content: flex-start;
+            gap:140px;
+        }
+        &__list{
+            flex-basis: auto;
+        }
+    }
+    @media(max-width:767px){
+        &__inner{
+            flex-direction: column-reverse;
+        }
+        &__menu{
+            flex-basis: auto;
+        }
+    }
+    @media(max-width:550px){
+        &__menu{
+            gap:40px;
+        }
     }
 }
