@@ -21,7 +21,7 @@
         display: flex;
         justify-content: space-between;
         gap:15px;
-        padding: 80px 0;
+        padding: clamp(1.563rem, 0.055rem + 6.43vw, 5rem) 0;
         align-items: center;
         padding-left: 180px;
         
@@ -30,11 +30,11 @@
         flex-basis: 536px;
         h4{
             color: #fff;
-            font-size: 28px;
+            font-size: clamp(1.25rem, 1.031rem + 0.94vw, 1.75rem);
             margin-bottom: 4px;
         }
         p{
-            font-size: 20px;
+            font-size: clamp(1.125rem, 1.07rem + 0.23vw, 1.25rem);
             color:#F0F0F0;
         }
     }
@@ -59,6 +59,43 @@
     &__input{
         @extend %input;
         padding-left: 44px;
-        
+    }
+    @media(max-width:1280px){
+        &__text{
+            flex-basis: 470px;
+        }
+    }
+    @media(max-width:1023px){
+        &__content{
+            padding-left: 0;
+            flex-direction: column;
+        }
+        &__text{
+            flex-basis: auto;
+            text-align: center;
+        }
+        &__inner{
+            &:before{
+                display: none;
+            }
+        }
+        &__form{
+            width: 100%;
+        }
+        &__input{
+            flex-basis: 50%;
+        }
+        &__btn{
+            flex:auto;
+        }
+    }
+    @media(max-width:550px){
+        &__form{
+            flex-direction: column;
+            &:before{
+                top:10%;
+                transform: translateY(0);
+            }
+        }
     }
 }

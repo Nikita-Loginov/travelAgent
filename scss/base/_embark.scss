@@ -116,6 +116,9 @@
                 display: none;
             }
         }
+        &__content{
+            flex-basis: auto;
+        }
     }
     @media(max-width:767px){
         &__list{

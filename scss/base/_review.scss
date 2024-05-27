@@ -24,10 +24,10 @@
         display: flex;
         gap:4px;
         align-items: center;
-        margin-bottom: 32px;
+        margin-bottom: clamp(0.75rem, 0.202rem + 2.34vw, 2rem);
     }
     &__text{
-        margin-bottom: 32px;
+        margin-bottom: clamp(0.75rem, 0.202rem + 2.34vw, 2rem);
     }
     &__authot{
         display: flex;
@@ -38,6 +38,26 @@
         @extend %title;
         font-size: 16px;
     }
+    @media(max-width:1280px){
+        height: auto;
+        padding-bottom: 20px;
+        &__row{
+            flex-direction: row;
+            gap:20px;
+            animation: reviewRowSliderMedia 20s linear infinite;
+            &:not(:first-of-type){
+                display: none;
+            }
+        }
+        &__item{
+            min-width: 33.333%;
+        }
+    }
+    @media(max-width:1280px){
+        &__item{
+            min-width: 20%;
+        }
+    }
 }
 
 @keyframes reviewRowSlider{
@@ -45,6 +65,15 @@
         transform: translateY(0);
     }
     100%{
-        transform: translateY(-50%);
+        transform: translateY(-50%); 
+    }
+}
+
+@keyframes reviewRowSliderMedia{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%); 
     }
 }
