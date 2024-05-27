@@ -1,9 +1,10 @@
 .embark{
-    padding: 60px 0;
+    padding: clamp(1.25rem, 0.154rem + 4.68vw, 3.75rem) 0;
     &__inner{
         display: flex;
         justify-content: space-between;
-        gap:40px;
+        gap:58px;
+        align-items: center;
     }
     &__content{
         flex-basis: 520px;
@@ -15,13 +16,13 @@
     }
     &__text{
         @extend %text;
-        margin-bottom: 32px;
+        margin-bottom: clamp(0.625rem, 0.022rem + 2.57vw, 2rem);
     }
     &__list{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         justify-content: space-between;
-        gap:24px;
+        gap:clamp(0.75rem, 0.421rem + 1.4vw, 1.5rem);
         list-style: none;
         counter-reset: custom-counter;
     }
@@ -100,6 +101,31 @@
         font-size: 18px;
         span{
             color:$accent-color;
+        }
+    }
+    @media(max-width:1023px){
+        &__inner{
+            flex-direction: column-reverse;
+            gap:15px;
+        }
+        &__img--small{
+            display: none;
+        }
+        &__image{
+            &:before{
+                display: none;
+            }
+        }
+    }
+    @media(max-width:767px){
+        &__list{
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__decor{
+            display: none;
+        }
+        &__img{
+            width: 100%;
         }
     }
 }

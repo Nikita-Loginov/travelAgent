@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer__list, .different__text, .embark__text, .popular-swiper__star, .partners__text, .top__text, .header__link {
-  font-size: 18px;
+  font-size: clamp(1rem, 0.945rem + 0.23vw, 1.125rem);
   color: rgb(144, 144, 144);
   line-height: 1.5;
 }
@@ -563,6 +563,9 @@ body.open--menu {
   .top__form-btn {
     width: 100%;
   }
+  .top__form-btn:hover {
+    scale: 1.05;
+  }
 }
 @media (max-width: 767px) {
   .top__inner {
@@ -570,6 +573,9 @@ body.open--menu {
   }
   .top__title:before {
     bottom: -5px;
+  }
+  .top__content {
+    flex-basis: auto;
   }
 }
 @media (max-width: 550px) {
@@ -622,7 +628,7 @@ body.open--menu {
 .popular__inner {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: clamp(0.875rem, 0.382rem + 2.11vw, 2rem);
   overflow: hidden;
 }
 .popular__body {
@@ -633,7 +639,7 @@ body.open--menu {
 }
 .popular__body-text {
   display: grid;
-  gap: 16px;
+  gap: clamp(0.125rem, -0.259rem + 1.64vw, 1rem);
 }
 .popular-swiper__image {
   border-radius: 12px;
@@ -695,12 +701,13 @@ body.open--menu {
 }
 
 .embark {
-  padding: 60px 0;
+  padding: clamp(1.25rem, 0.154rem + 4.68vw, 3.75rem) 0;
 }
 .embark__inner {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 58px;
+  align-items: center;
 }
 .embark__content {
   flex-basis: 520px;
@@ -710,13 +717,13 @@ body.open--menu {
   text-transform: capitalize;
 }
 .embark__text {
-  margin-bottom: 32px;
+  margin-bottom: clamp(0.625rem, 0.022rem + 2.57vw, 2rem);
 }
 .embark__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
-  gap: 24px;
+  gap: clamp(0.75rem, 0.421rem + 1.4vw, 1.5rem);
   list-style: none;
   counter-reset: custom-counter;
 }
@@ -790,6 +797,29 @@ body.open--menu {
 }
 .embark__decor-title span {
   color: rgb(53, 175, 244);
+}
+@media (max-width: 1023px) {
+  .embark__inner {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+  .embark__img--small {
+    display: none;
+  }
+  .embark__image:before {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .embark__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .embark__decor {
+    display: none;
+  }
+  .embark__img {
+    width: 100%;
+  }
 }
 
 .different {

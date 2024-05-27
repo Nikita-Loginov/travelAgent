@@ -1,6 +1,6 @@
 const swiper = new Swiper('.popular-swiper', {
     loop: true,
-    slidesPerView: 1.1,
+    slidesPerView: 1.3,
     spaceBetween: 32,
     navigation: {
         nextEl: '.swiper-arrows__next',

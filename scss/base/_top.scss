@@ -213,6 +213,9 @@
         }
         &__form-btn{
             width: 100%;
+            &:hover{
+                scale:1.05;
+            }
         }
     }
     @media(max-width:767px){
@@ -223,6 +226,9 @@
             &:before{
                 bottom:-5px;
             }
+        }
+        &__content{
+            flex-basis: auto;
         }
     }
     @media(max-width:550px){

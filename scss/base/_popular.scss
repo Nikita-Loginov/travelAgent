@@ -3,7 +3,7 @@
     &__inner{
         display: flex;
         flex-direction: column;
-        gap:32px;
+        gap:clamp(0.875rem, 0.382rem + 2.11vw, 2rem);
         overflow: hidden;
     }
     &__body{
@@ -14,7 +14,7 @@
     }
     &__body-text{
         display: grid;
-        gap:16px;
+        gap:clamp(0.125rem, -0.259rem + 1.64vw, 1rem);
         h3{
             @extend %title;
         }
