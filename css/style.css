@@ -333,6 +333,7 @@ body.open--menu {
     gap: 20px;
     transform: translateX(100%);
     transition: all 0.3s;
+    z-index: 2;
   }
   .menu__link {
     color: #fff;
@@ -365,7 +366,7 @@ body.open--menu {
 }
 
 .top {
-  padding: 60px 0;
+  padding: clamp(1.25rem, 0.154rem + 4.68vw, 3.75rem) 0;
 }
 .top__inner {
   display: flex;
@@ -377,22 +378,24 @@ body.open--menu {
   flex-basis: 560px;
 }
 .top__title {
-  font-size: 72px;
-  margin-bottom: 26px;
+  font-size: clamp(2rem, 0.904rem + 4.68vw, 4.5rem);
+  margin-bottom: clamp(0.625rem, 0.186rem + 1.87vw, 1.625rem);
   position: relative;
 }
 .top__title:before {
   position: absolute;
   content: "";
-  width: 268px;
-  height: 24px;
+  width: clamp(10.5rem, 7.759rem + 11.7vw, 16.75rem);
+  height: clamp(1.25rem, 1.14rem + 0.47vw, 1.5rem);
   left: 0;
   bottom: 10px;
   background-image: url(../../images/top/underline.svg);
   z-index: -1;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .top__text {
-  margin-bottom: 40px;
+  margin-bottom: clamp(0.938rem, 0.252rem + 2.92vw, 2.5rem);
 }
 .top__form {
   width: 100%;
@@ -491,7 +494,7 @@ body.open--menu {
   gap: 4px;
 }
 .top__card-name {
-  font-size: 18px;
+  font-size: clamp(0.875rem, 0.765rem + 0.47vw, 1.125rem);
 }
 .top__card-price-dollars {
   color: rgb(53, 175, 244);
@@ -531,6 +534,48 @@ body.open--menu {
 }
 .top__decor img {
   animation: topDecorRotate 10s infinite;
+}
+@media (max-width: 1023px) {
+  .top__image {
+    width: 100%;
+  }
+  .top__decor {
+    bottom: 0;
+    right: 0;
+    width: 27%;
+  }
+  .top__decor img {
+    width: 100%;
+  }
+  .top__card {
+    top: 40px;
+    left: 10px;
+    min-width: 300px;
+  }
+  .top__form {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 16px 26px;
+  }
+  .top__form-decor {
+    display: none;
+  }
+  .top__form-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .top__inner {
+    flex-direction: column-reverse;
+  }
+  .top__title:before {
+    bottom: -5px;
+  }
+}
+@media (max-width: 550px) {
+  .top__card {
+    display: none;
+  }
 }
 
 @keyframes topDecorRotate {
